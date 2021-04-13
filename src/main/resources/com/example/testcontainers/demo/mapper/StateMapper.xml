@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.testcontainers.demo.mapper.StateMapper">
+
+    <resultMap id="ResultMap" type="java.util.HashMap">
+        <result property="cde" column="cde"/>
+        <result property="description" column="description"/>
+        <result property="county_cde" column="county_cde"/>
+    </resultMap>
+
+    <select id="getState"  parameterType="java.lang.String" resultMap="ResultMap">
+        select * from ALX_STATE_TYPS where cde = #{cde}
+    </select>
+</mapper>
