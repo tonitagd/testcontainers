@@ -21,7 +21,7 @@ public class AbstractIntegrationTest {
       ApplicationContextInitializer<ConfigurableApplicationContext> {
 
     @Rule
-    public static OracleContainer oracle = new OracleContainer(DockerImageName.parse("docker.io/tonitagd/testcontainers"))
+    public static OracleContainer oracle = new OracleContainer(DockerImageName.parse("docker.io/tonitagd/optimised-oracle"))
         .withPassword("zion_uploader")
         .withUsername("ZION_UPLOADER")
         .withExposedPorts(1521);
@@ -35,7 +35,7 @@ public class AbstractIntegrationTest {
       properties.put("spring.datasource.url", oracle.getJdbcUrl());
       properties.put("spring.datasource.username", oracle.getUsername());
       properties.put("spring.datasource.password", oracle.getPassword());
-//      properties.put("spring.liquibase.enabled", "false");
+      properties.put("spring.liquibase.enabled", "false");
       return properties;
     }
 
