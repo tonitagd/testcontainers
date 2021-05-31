@@ -16,12 +16,12 @@ class DemoApplicationTests extends AbstractIntegrationTest {
 
   @Test
   void contextLoads() {
-    Map<String, String> zdr = controller.getState("ZDR");
+    Map<String, String> employee = controller.getEmployee(450);
 
-    assertNotNull(zdr);
-    assertEquals("ZDR", zdr.get("cde"));
-    assertEquals("Zdrastiii", zdr.get("description"));
-    assertEquals("UK", zdr.get("county_cde"));
+    assertNotNull(employee);
+    assertEquals("Steward", employee.get("JobTitle"));
+    assertEquals("Kirsten_Grant6015@corti.com", employee.get("EmailAddress"));
+    assertEquals("Kirsten Grant", employee.get("FirstNameLastName"));
   }
 
 }

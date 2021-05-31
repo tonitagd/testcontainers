@@ -8,6 +8,7 @@ import org.springframework.core.env.MapPropertySource;
 import org.springframework.test.context.ContextConfiguration;
 import org.testcontainers.containers.OracleContainer;
 import org.testcontainers.lifecycle.Startables;
+import org.testcontainers.utility.DockerImageName;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class AbstractIntegrationTest {
       ApplicationContextInitializer<ConfigurableApplicationContext> {
 
     @Rule
-    public static OracleContainer oracle = new OracleContainer("zion_oracle")
+    public static OracleContainer oracle = new OracleContainer(DockerImageName.parse("docker.io/tonitagd/testcontainers"))
         .withPassword("zion_uploader")
         .withUsername("ZION_UPLOADER")
         .withExposedPorts(1521);

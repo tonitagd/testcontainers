@@ -45,4 +45,6 @@ dependencies {
   }
   testCompile "org.testcontainers:testcontainers:1.15.2"
   testImplementation "org.testcontainers:oracle-xe:1.15.2"
+  testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+
 }

@@ -1,30 +1,21 @@
 databaseChangeLog:
-    - changeSet:
-        id: 1.0/7
-        author: testcontainer
-        comment: "Test insert"
-        changes:
-          - insert:
-              tableName: ALX_STATE_TYPS
-              columns:
-                - column:
-                    name: cde
-                    value: "ZDR"
-                - column:
-                    name: description
-                    value: "Zdrastiii"
-                - column:
-                    name: county_cde
-                    value: "UK"
-                - column:
-                    name: created_by
-                    value: "testcontainer"
-                - column:
-                    name: CREATION_DATE
-                    value: "SYSTIMESTAMP"
-                - column:
-                    name: modified_by
-                    value: "testcontainer"
-                - column:
-                    name: MODIFICATION_DATE
-                    value: "SYSTIMESTAMP"
+  - changeSet:
+      id: 1.0/7
+      author: testcontainer
+      comment: "Test insert"
+      changes:
+        - insert:
+            tableName: MOCKDATA34
+            columns:
+              - column:
+                  name: ID
+                  value: "9999999"
+              - column:
+                  name: JobTitle
+                  value: "ZDR"
+              - column:
+                  name: EmailAddress
+                  value: "Zdrastiii@zrd.com"
+              - column:
+                  name: FirstNameLastName
+                  value: "ZDR KPR"

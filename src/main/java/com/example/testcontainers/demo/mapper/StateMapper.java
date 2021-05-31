@@ -6,5 +6,5 @@ import java.util.Map;
 
 @Mapper
 public interface StateMapper {
-  Map<String, String> getState(String cde);
+  Map<String, String> getEmployee(int cde);
 }

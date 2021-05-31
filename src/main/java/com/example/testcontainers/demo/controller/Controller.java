@@ -14,8 +14,8 @@ public class Controller {
     @Autowired
     private StateMapper mapper;
 
-    @GetMapping("state/{cde}")
-    public Map<String, String> getState(@PathVariable String cde) {
-      return mapper.getState(cde);
+    @GetMapping("employee/{cde}")
+    public Map<String, String> getEmployee(@PathVariable Integer cde) {
+      return mapper.getEmployee(cde);
     }
 }
